@@ -21,6 +21,8 @@
 		 if ($data.eventVersion == eventVersion) {
 			 $data.lastValue = $data.trimValue ? $.trim($this.val()) : $this.val();
 			 if ($data.lastValue.length > $data.minLengthToTrigger) {
+
+				 //console.log('idle detected: '  + $data.eventVersion);
 				 $this.trigger('textentered');
 			 }
 		 }
@@ -59,8 +61,8 @@
         	 $data.trimValue = settings.trimValue;
         	 $data.minLengthToTrigger = settings.minLengthToTrigger;
         	 $this.data('textentered', $data);
-    		 if (!globalSettings.live) { alert('not live');
-	        	 $this.unbind('.textentered');
+    		 if (!globalSettings.live) {
+	        	 $this.unbind('textentered');
 	        	 $this.bind(settings.eventsToTrap, function() {
 	        		$data.eventVersion++;
 	        		setTimeout(function() {$this.textentered('fieldValueChange', $this.data('textentered').eventVersion);}, $data.pasteDelay);
@@ -91,8 +93,9 @@
 			  var $this = $(eventObject.target);
 			  if (!$this.data('textentered')) {
 				  $this.textentered();
-				  $this.textentered('fieldValueChange', $this.data('textentered').eventVersion);
 			  }
+			  $this.data('textentered').eventVersion++;
+			  $this.textentered('fieldValueChange', $this.data('textentered').eventVersion);
 		  });
 	  }
 
