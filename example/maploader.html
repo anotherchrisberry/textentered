@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title>jQuery Sandbox</title>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+        <script type="text/javascript" src="../jquery.textentered.js"></script>
+        <script type="text/javascript" src="jquery.maploader.js"></script>
+        
+        <link rel="stylesheet" href="http://jqueryui.com/themes/base/jquery.ui.all.css"/>
+        <script src="http://jqueryui.com/ui/jquery.ui.core.js"></script>
+        <script src="http://jqueryui.com/ui/jquery.ui.widget.js"></script>
+        <script src="http://jqueryui.com/ui/jquery.ui.mouse.js"></script>
+        <script src="http://jqueryui.com/ui/jquery.ui.slider.js"></script>
+        
+        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+        
+    </head>
+    <body>
+        
+        <form id="inputForm">
+        
+            Location:
+            <input type="text" id="loc" class="loco"/>
+            <!-- <textarea id="locTA" class="loco"></textarea> -->
+            <br/>
+            Zoom:
+            <div id="zoom" style="width:600px; margin-left:20px"></div>
+            Map:
+            <div id="locMap" style="width:800px; height:350px"></div>
+            
+        </form>        
+
+
+    </body>
+
+    <script type="text/javascript">
+    
+    //if (typeof console === "undefined") {
+    	console = {
+    			log: function(text) {
+    				$('body').append('<div>' + text + '</div>');
+    			}
+    	};
+    //}
+    
+    // hidden fields will not trigger a focus and thus live binding won't work.
+    //$('#locTA').textentered();
+    
+    $('#loc').maploader({placeholder: '#locMap'});
+        
+    </script>
+    
+</html>
