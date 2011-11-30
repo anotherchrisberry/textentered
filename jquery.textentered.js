@@ -20,7 +20,7 @@
 		 var $data = $this.data('textentered');
 		 if ($data.eventVersion == eventVersion) {
 			 $data.lastValue = $data.trimValue ? $.trim($this.val()) : $this.val();
-			 if ($data.lastValue.length > $data.minLengthToTrigger) {
+			 if ($data.lastValue.length >= $data.minLengthToTrigger) {
 
 				 //console.log('idle detected: '  + $data.eventVersion);
 				 $this.trigger('textentered');
