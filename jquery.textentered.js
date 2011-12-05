@@ -1,5 +1,6 @@
 /********************************
  *  textentered.js
+ *  version 1.0
  *  
  *  Copyright 2011 by Chris Berry, Object Partners
  *  chris.berry -at- objectpartners.com
