@@ -1,1 +1,0 @@
-This plugin is simple: it allows your jquery code to listen for a new event: textentered. This event fires whenever a user pauses in typing.

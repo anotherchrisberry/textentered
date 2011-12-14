@@ -101,15 +101,17 @@
   
   };
   
-	  if (globalSettings.live) {
-		  $('body').live(defaults.eventsToTrap, function(eventObject) {
-			  var $this = $(eventObject.target);
-			  if (!$this.data('textentered')) {
-				  $this.textentered();
-			  }
-			  $this.data('textentered').eventVersion++;
-			  $this.textentered('fieldValueChange', $this.data('textentered').eventVersion);
-		  });
-	  }
+  $(document).ready( function() {
+    if (globalSettings.live) {  
+	  $('body').bind(defaults.eventsToTrap, function(eventObject) {
+	    var $this = $(eventObject.target);
+	    if (!$this.data('textentered')) {
+			$this.textentered();
+		}
+		$this.data('textentered').eventVersion++;
+		$this.textentered('fieldValueChange', $this.data('textentered').eventVersion);
+	  });
+    }
+  });
 
 })( jQuery );
