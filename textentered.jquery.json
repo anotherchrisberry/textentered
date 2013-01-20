@@ -1,7 +1,16 @@
 {
     "name": "textentered",
-    "version": "1.0.0",
-    "title": "jQuery.textentered.js",
+    "title": "jQuery TextEntered Event",
+    "description": "This plugin causes text fields and textareas to fire a jQuery event, textentered, when a user pauses after entering text",
+    "keywords": [
+        "events",
+        "form",
+        "keypress",
+        "throttling",
+        "input",
+        "textarea"
+    ],
+    "version": "1.0.3",
     "author": {
         "name": "Chris Berry",
         "url": "https://github.com/anotherchrisberry"
@@ -9,25 +18,15 @@
     "licenses": [
         {
             "type": "MIT",
-            "url": "MIT-LICENSE.txt"
-        },
-        {
-            "type": "GPL",
-            "url": "GPL-LICENSE.txt"
+            "url": "https://github.com/anotherchrisberry/textentered/blob/master/MIT-LICENSE.txt"
         }
     ],
+    "homepage": "https://github.com/anotherchrisberry/textentered",
+    "docs": "https://github.com/anotherchrisberry/textentered",
+    "issues": "https://github.com/anotherchrisberry/textentered/issues",
     "dependencies": {
         "jquery": "1.4"
     },
-    "description": "This plugin causes text fields and textareas to fire a jQuery event, textentered, when a user pauses after entering text",
-    "keywords": [
-        "events",
-        "keypress",
-        "throttling",
-        "input",
-        "textarea"
-    ],
-    "homepage": "https://github.com/anotherchrisberry/textentered",
     "files": [
         "jquery.textentered.js"
     ]

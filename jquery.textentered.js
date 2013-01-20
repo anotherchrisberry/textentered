@@ -1,13 +1,12 @@
 /********************************
  *  textentered.js
- *  version 1.0
+ *  version 1.0.3
  *  
  *  Copyright 2011 by Chris Berry, Object Partners
  *  chris.berry -at- objectpartners.com
  *  
- *  Dual licensed under the MIT and GPL licenses:
+ *  Licensed under the MIT license:
  *  http://www.opensource.org/licenses/mit-license.php
- *  http://www.gnu.org/licenses/gpl.html
  */
 
 
