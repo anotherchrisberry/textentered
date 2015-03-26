@@ -71,6 +71,7 @@
 				$data.lastValue = $this.val();
 				$data.eventVersion = 0;
 				$data.idleDelay = settings.idleDelay;
+				$data.pasteDelay = settings.pasteDelay;
 				$data.trimValue = settings.trimValue;
 				$data.minLengthToTrigger = settings.minLengthToTrigger;
 				$this.data('textentered', $data);
