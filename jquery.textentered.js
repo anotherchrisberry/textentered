@@ -1,9 +1,9 @@
 /********************************
  *	textentered.js
- *	version 1.0.3
+ *	version 1.0.4
  *
- *	Copyright 2011 by Chris Berry, Object Partners
- *	chris.berry -at- objectpartners.com
+ *	Copyright 2011 by Chris Berry
+ *	@cb_rry
  *
  *	Licensed under the MIT license:
  *	http://www.opensource.org/licenses/mit-license.php
@@ -20,7 +20,7 @@
 	var defaults = {
 		idleDelay: 490, // how long to wait before firing the event
 		pasteDelay: 10, // because paste events in Firefox do not register the pasted value immediately, we have to delay it a tiny bit.
-		eventsToTrap: 'keyup paste blur change', // events that cause the event to fire
+		eventsToTrap: 'input propertychange keyup paste blur change', // events that cause the event to fire
 		minLengthToTrigger: 0, // if the length of the entered text is less than this, do not fire the event. Set to 0 to always fire.
 		trimValue: true // trim the value for comparison - will prevent firing if user types the space key, but does not actually change the value of the field
 	};
@@ -32,8 +32,6 @@
 			if ($data.eventVersion == eventVersion) {
 				$data.lastValue = $data.trimValue ? $.trim($this.val()) : $this.val();
 				if ($data.lastValue.length >= $data.minLengthToTrigger) {
-
-					//console.log('idle detected: '	+ $data.eventVersion);
 					$this.trigger('textentered');
 				}
 			}
