@@ -29,7 +29,7 @@
 		detectIdle : function(eventVersion) {
 			var $this = $(this);
 			var $data = $this.data('textentered');
-			if ($data.eventVersion == eventVersion) {
+			if ($data && $data.eventVersion == eventVersion) {
 				$data.lastValue = $data.trimValue ? $.trim($this.val()) : $this.val();
 				if ($data.lastValue.length >= $data.minLengthToTrigger) {
 					$this.trigger('textentered');
